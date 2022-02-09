@@ -196,6 +196,15 @@ class SpectralPooling2d(nn.Module):
         x= self.kernel(x)
         return x
 
+class SpectralBN(nn.Module):
+    def __init__(self,**kwargs):
+        super(SpectralBN, self).__init__()
+        self.BNreal=nn.BatchNorm2d(**kwargs)
+        self.BNimag = nn.BatchNorm2d(**kwargs)
+
+    def forward(self,x):
+        return torch.stack((self.BNreal(x[...,0]),self.BNimag(x[...,1])),dim=-1)
+
 if __name__ == '__main__':
     import time
 

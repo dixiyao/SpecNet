@@ -17,8 +17,6 @@ The current implementation supports following operations in frequency domain
 * Spectral Convolution (Elementwise production)
 * Spectral Pooling
 * Spectral Activation (Tanh)
-
-_**Todo**_
 * Spectral Normalization
 
 ### Efficiency and enery saving
