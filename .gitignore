@@ -1,0 +1,11 @@
+.idea
+*.pyc
+DFT_correctness
+layers_my.py
+layers_org.py
+models_my.py
+operation_my.py
+ResNets.py
+utils_test_main.py
+vgg.py
+result
